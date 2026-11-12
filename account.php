@@ -211,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['update_password_btn'])
 
         @media (max-width: 800px) {
             .account-container { flex-direction: column; }
-            .sidebar, .content-card { width: 100%; }
+            .sidebar, .content-card { width: 100%; max-width: none; box-sizing: border-box; }
         }
     </style>
 </head>

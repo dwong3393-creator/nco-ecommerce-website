@@ -6,6 +6,17 @@ if(!isset($_SESSION['user_id'])){
     header("Location: index.php");
     exit();
 }
+
+// Nothing to check out? Go back to the cart
+$cart_items = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
+if (empty($cart_items)) {
+    header("Location: cart.php");
+    exit();
+}
+$total = 0;
+foreach ($cart_items as $item) {
+    $total += $item['price'] * $item['quantity'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +78,7 @@ if(!isset($_SESSION['user_id'])){
 
         .form-group input {
             width: 100%;
+            box-sizing: border-box;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -206,10 +218,12 @@ if(!isset($_SESSION['user_id'])){
                 <span>Subtotal</span>
             </div>
             
+            <?php foreach ($cart_items as $item): ?>
             <div class="summary-row">
-                <span>White Dress x 1</span>
-                <span>$155</span>
+                <span><?php echo htmlspecialchars($item['name'], ENT_QUOTES, 'UTF-8'); ?> x <?php echo (int)$item['quantity']; ?></span>
+                <span>$<?php echo number_format($item['price'] * $item['quantity'], 2); ?></span>
             </div>
+            <?php endforeach; ?>
             
             <div class="summary-row">
                 <span>Shipping</span>
@@ -218,7 +232,7 @@ if(!isset($_SESSION['user_id'])){
 
             <div class="summary-total">
                 <span>Total</span>
-                <span>$155</span>
+                <span>$<?php echo number_format($total, 2); ?></span>
             </div>
 
             <button type="submit" form="checkout-form" class="btn-place-order">PLACE ORDER</button>

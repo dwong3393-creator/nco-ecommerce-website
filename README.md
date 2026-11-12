@@ -2,9 +2,7 @@
 
 A full-stack online clothing store built for a university web development module. Customers can browse the collection, register and log in, add products to a cart that is saved to their account, check out with shipping details, and view their order history.
 
-> A static (front-end only) version of the same brand is live at **[dwong3393-creator.github.io/naeo-clothing-website](https://dwong3393-creator.github.io/naeo-clothing-website/)**. This repository is the PHP version with the shopping features, so it needs a PHP server and MySQL to run.
-
-![Home page](screenshots/desktop-home.jpg)
+> This is a PHP + MySQL project, so it can't run on GitHub Pages. Screenshots of every page are below, and the setup steps show how to run it on your own computer.
 
 ## Features
 
@@ -65,9 +63,78 @@ The database login is set in `db.php` (XAMPP's default user `root` with no passw
 
 ## Screenshots
 
-| Product page | Cart on a phone |
+### Shop pages
+
+| Home | Showcase |
 |---|---|
-| ![Product page](screenshots/desktop-product.jpg) | ![Mobile cart](screenshots/mobile-cart.jpg) |
+| ![Home](screenshots/desktop-home.jpg) | ![Showcase](screenshots/desktop-showcase.jpg) |
+
+| Showcase (page 2) | Product page |
+|---|---|
+| ![Showcase page 2](screenshots/desktop-showcase-2.jpg) | ![Product page](screenshots/desktop-product.jpg) |
+
+<details>
+<summary><b>All 12 product pages</b> (click to expand)</summary>
+
+| Product 2 | Product 3 | Product 4 |
+|---|---|---|
+| ![Product 2](screenshots/desktop-product-2.jpg) | ![Product 3](screenshots/desktop-product-3.jpg) | ![Product 4](screenshots/desktop-product-4.jpg) |
+
+| Product 5 | Product 6 | Product 7 |
+|---|---|---|
+| ![Product 5](screenshots/desktop-product-5.jpg) | ![Product 6](screenshots/desktop-product-6.jpg) | ![Product 7](screenshots/desktop-product-7.jpg) |
+
+| Product 8 | Product 9 | Product 10 |
+|---|---|---|
+| ![Product 8](screenshots/desktop-product-8.jpg) | ![Product 9](screenshots/desktop-product-9.jpg) | ![Product 10](screenshots/desktop-product-10.jpg) |
+
+| Product 11 | Product 12 | |
+|---|---|---|
+| ![Product 11](screenshots/desktop-product-11.jpg) | ![Product 12](screenshots/desktop-product-12.jpg) | |
+
+</details>
+
+### Cart and checkout
+
+| Cart | Checkout |
+|---|---|
+| ![Cart](screenshots/desktop-cart.jpg) | ![Checkout](screenshots/desktop-checkout.jpg) |
+
+| Order confirmed | |
+|---|---|
+| ![Order confirmed](screenshots/desktop-order-confirmed.jpg) | |
+
+### Accounts
+
+| Log in | Register |
+|---|---|
+| ![Log in](screenshots/desktop-login.jpg) | ![Register](screenshots/desktop-register.jpg) |
+
+| My Account – change password | My Account – order history |
+|---|---|
+| ![Account security tab](screenshots/desktop-account.jpg) | ![Account orders tab](screenshots/desktop-account-orders.jpg) |
+
+| My Account – shipping address | |
+|---|---|
+| ![Account address tab](screenshots/desktop-account-address.jpg) | |
+
+### Information pages
+
+| About | FAQ | Contact |
+|---|---|---|
+| ![About](screenshots/desktop-about.jpg) | ![FAQ](screenshots/desktop-faq.jpg) | ![Contact](screenshots/desktop-contact.jpg) |
+
+### On a phone
+
+| Home | Showcase | Product |
+|---|---|---|
+| ![Mobile home](screenshots/mobile-home.jpg) | ![Mobile showcase](screenshots/mobile-showcase.jpg) | ![Mobile product](screenshots/mobile-product.jpg) |
+
+| Log in | Cart | My Account |
+|---|---|---|
+| ![Mobile log in](screenshots/mobile-login.jpg) | ![Mobile cart](screenshots/mobile-cart.jpg) | ![Mobile account](screenshots/mobile-account.jpg) |
+
+*The account, cart and order pages show sample data.*
 
 ## Author
 
